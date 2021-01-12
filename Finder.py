@@ -1,7 +1,7 @@
 import pandas as panda
 import openpyxl
 
-# Find Empty Values in a Swallow Entry
+# Find Empty/Missing Values in a Swallow Entry
 df = panda.read_excel (r'GG1.xlsx')
 
 for x in range(295):
