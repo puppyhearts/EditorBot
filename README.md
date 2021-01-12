@@ -8,4 +8,5 @@ Bash Script and Python pandas based Bot for documenting errors and Editing JSON 
 - Add info into Empty Fields (From Database)
 - Eliminate Whitespace in entries for consistency (Trim)
 - Check for Dead Links and document if present
+- Use grep and awk to automate the export/import process and interact with the internet
 
