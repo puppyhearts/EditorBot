@@ -41,8 +41,8 @@ for x in range(295):
             print ('Source of Date not Mentioned')
             v = True 
         
-    for x in range(29):
-        s = str(x)
+    for x1 in range(29):
+        s = str(x1)
         Creators_name = 'Creators/'+ s +'/name' 
         Creators_dates = 'Creators/'+ s +'/dates'
         Creators_url = 'Creators/'+ s +'/url'
@@ -50,16 +50,20 @@ for x in range(295):
         Creators_role = 'Creators/'+ s +'/role/0/id'
         if panda.notna(df.loc[x,Creators_id]):
             if panda.isna(df.loc[x,Creators_name]):
-                print ('Creator ' +s+ 's Name Missing')
+                print ('Creator ' + s + 's Name Missing')
+                v = True
             if panda.isna(df.loc[x,Creators_dates]):
-                print ('Creator ' +s+ 's Date Missing')
+                print ('Creator ' + s + 's Date Missing')
+                v = True
             if panda.isna(df.loc[x,Creators_url]):
-                print ('Creator ' +s+ 's URL Missing')
+                print ('Creator ' + s + 's URL Missing')
+                v = True
             if panda.isna(df.loc[x,Creators_role]):
-                print ('Creator ' +s+ 's Role Missing')
+                print ('Creator ' + s + 's Role Missing')
+                v = True
                 
-    for x in range(5):
-        s = str(x)
+    for x2 in range(5):
+        s = str(x2)
         Contributors_name = 'Contributors/'+ s +'/name' 
         Contributors_dates = 'Contributors/'+ s +'/dates'
         Contributors_url = 'Contributors/'+ s +'/url'
@@ -68,12 +72,16 @@ for x in range(295):
         if panda.notna(df.loc[x,Contributors_id]):
             if panda.isna(df.loc[x,Contributors_name]):
                 print ('Contributor ' +s+ 's Name Missing')
+                v = True
             if panda.isna(df.loc[x,Contributors_dates]):
                 print ('Contributor ' +s+ 's Date Missing')
+                v = True
             if panda.isna(df.loc[x,Contributors_url]):
                 print ('Contributor ' +s+ 's URL Missing')
+                v = True
             if panda.isna(df.loc[x,Contributors_role]):
                 print ('Contributor ' +s+ 's Role Missing')
+                v = True
             
     if panda.isna(df.loc[x,'Material_Description/0/id']):
         print ('No Entry Under Material Description')
